@@ -8,6 +8,9 @@ import element from './element/element'
 // import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import vuedraggable from 'vuedraggable'// 拖拽插件
+// import CKEditor from '@ckeditor/ckeditor5-vue'// 富文本插件
+
+// Vue.use(CKEditor)
 
 // Vue.use(ElementUI)
 Vue.use(element)

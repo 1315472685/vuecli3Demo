@@ -21,7 +21,7 @@ export default {
 
     // 渲染编辑器
     // 使用该CKEDITOR.replace()方法将现有<textarea>元素替换为CKEditor。
-    self.ckeditor = window.CKEDITOR.replace(self.id)
+    self.ckeditor = window.CKEDITOR.replace(self.id, {})
 
     // 设置初始内容
     self.ckeditor.setData(self.value)
@@ -66,7 +66,6 @@ export default {
   },
   // 销毁组件前，销毁编辑器
   beforeDestroy: function () {
-    console.log(this.ckeditor)
     this.ckeditor.destroy()
   }
 }

@@ -1,6 +1,5 @@
 'use strict'
 const path = require('path')
-// 富文本框
 function resolve (dir) {
   return path.join(__dirname, dir)
 }
@@ -40,7 +39,6 @@ module.exports = {
       }
     }
   }
-
   // css: {
   //   loaderOptions: {
   //     sass: {

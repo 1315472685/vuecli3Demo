@@ -35,17 +35,12 @@ export default new Router({
     {
       path: '/ckeditor',
       name: 'ckeditor',
-      component: () => import(/* webpackChunkName: "about" */ './views/ckeditor/ckeditor4.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/ckeditor/ckeditor.vue')
     },
     {
       path: '/cjeditorVue',
       name: 'cjeditorVue',
-      component: () => import(/* webpackChunkName: "about" */ './views/ckeditor/cjeditorVue5.vue')
-    },
-    {
-      path: '/ckeditorEasyImage4',
-      name: 'ckeditorEasyImage4',
-      component: () => import(/* webpackChunkName: "about" */ './views/ckeditor/ckeditorEasyImage4.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/ckeditor/cjeditorVue.vue')
     }
   ]
 })
