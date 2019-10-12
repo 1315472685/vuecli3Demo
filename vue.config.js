@@ -17,17 +17,18 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
+    },
+    proxy: {
+      '/api': {
+        target: 'http://api-dev.zmjubao.com', // 源地址
+        // ws: true,
+        changeOrigin: true, // 改变源
+        secure: false, // https协议
+        pathRewrite: {
+          '^/api': '/api' // 路径重写
+        }
+      }
     }
-    // proxy: {
-    //   '/api': {
-    //     target: '<url>',//源地址
-    //     ws: true,
-    //     changeOrigin: true,//改变源
-    //     pathRewrite: {
-    //       '^/api': '/api' //路径重写
-    //     }
-    //   },
-    // }
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that

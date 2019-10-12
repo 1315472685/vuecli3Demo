@@ -2,7 +2,7 @@
   <div>
     <el-button @click="add" type="primary" icon="el-icon-edit" circle></el-button>
     <p></p>
-    <textarea :id="id"></textarea>
+    <textarea :id="id" data-sample-short></textarea>
   </div>
 </template>
 <script>
@@ -10,12 +10,12 @@ export default {
   name: 'ckeditor4',
   props: ['value'],
   mounted: function () {
-    window.CKEDITOR.addCss(
-      'figure[class*=easyimage-gradient]::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }' +
-        'figure[class*=easyimage-gradient] figcaption { position: relative; z-index: 2; }' +
-        '.easyimage-gradient-1::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 66, 174, 234, .72 ) 100% ); }' +
-        '.easyimage-gradient-2::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 228, 66, 234, .72 ) 100% ); }'
-    )
+    // window.CKEDITOR.addCss(
+    //   'figure[class*=easyimage-gradient]::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }' +
+    //     'figure[class*=easyimage-gradient] figcaption { position: relative; z-index: 2; }' +
+    //     '.easyimage-gradient-1::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 66, 174, 234, .72 ) 100% ); }' +
+    //     '.easyimage-gradient-2::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 228, 66, 234, .72 ) 100% ); }'
+    // )
 
     const self = this
 
@@ -51,7 +51,7 @@ export default {
   methods: {
     add () {
       let str1 =
-        '<img alt="土星五号携带阿波罗11号" class="right" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1517952005,2185746019&fm=26&gp=0.jpg" />'
+        '<img alt="土星五号携带阿波罗11号" style="float:right" class="right" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1517952005,2185746019&fm=26&gp=0.jpg" />'
 
       if (this.content === str1) {
         console.log('121212')
