@@ -5,15 +5,15 @@ import store from './store'
 import './promise.js'
 import './registerServiceWorker'
 import element from './element/element'
-// import ElementUI from 'element-ui'
+import antDesign from './antDesign/antDesign'// 引入Ant Design of Vue UI库
+import 'ant-design-vue/dist/antd.css'
 import 'element-ui/lib/theme-chalk/index.css'
 import vuedraggable from 'vuedraggable'// 拖拽插件
 import vueChart from './chart/vueChart'// v-chart插件
 // import CKEditor from '@ckeditor/ckeditor5-vue'// 富文本插件
 
 // Vue.use(CKEditor)
-
-// Vue.use(ElementUI)
+Vue.use(antDesign)
 Vue.use(vueChart)
 Vue.use(element)
 Vue.use(vuedraggable)

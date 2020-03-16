@@ -15,7 +15,7 @@ export default new Router({
       }
     },
     {
-      path: '/about',
+      path: '/about/:id',
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
@@ -77,6 +77,14 @@ export default new Router({
         title: 'vueChart图表插件'
       }
 
+    },
+    {
+      path: '/AntDesignofVue',
+      name: 'AntDesignofVue',
+      component: () => import(/* webpackChunkName: "about" */ './views/AntDesignofVue/AntDesignofVue.vue'),
+      meta: {
+        title: 'AntDesignofVue UI框架'
+      }
     }
   ]
 })

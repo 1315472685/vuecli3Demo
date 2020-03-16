@@ -31,6 +31,9 @@ export default {
       girl: ['linzhil', 'cjk', 'bdyjy']
     }
   },
+  created () {
+    console.log(this.$route)
+  },
   updated () {
     console.log(this.list)
   },
